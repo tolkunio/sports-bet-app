@@ -1,9 +1,10 @@
 import s from './Header.module.scss';
+import Logo from "../../components/Logo/Logo";
 export const Header = () => {
     return (
-        <div>
-
-        </div>
+        <header className={s.header}>
+            <Logo/>
+        </header>
     );
 };
 
