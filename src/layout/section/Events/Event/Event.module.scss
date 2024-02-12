@@ -1,20 +1,30 @@
 .event {
-
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-family: 'AvertaStd';
 }
 
 .infoBlock {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  width: 35%;
 }
 
 .info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 1.4rem;
 
-  > a {
-    font-size: 0.875rem;;
+   .link {
+
+    color: white;
+  }
+  >a{
     color: white;
   }
 }
@@ -22,40 +32,82 @@
 .details {
   display: flex;
   flex-direction: row;
+  gap: 10px
+}
 
+.bb {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+  font-size: 0.6rem;
+  padding: 1px 2px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(92, 51, 207);
+  border-radius: 50%;
+  height: 1.1rem;
+  align-self: center;
 }
 
 .date {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 
   > span {
-    font-size: 0.75rem;
+    font-size: 1.30rem;
     line-height: 1;
     color: rgb(141, 157, 168);
     text-align: center;
   }
-
 }
 
 .null {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-self: stretch;
-  align-content: space-around;
+
   > span {
     padding: 0px;
     margin: 0px;
-    font-size: 0.75rem;
-    line-height: 1.4;
-    min-width: 16px;
+    font-size: 1.2rem;
     color: rgb(73, 179, 86);
     text-align: center;
   }
 }
 
 .scoreBlock {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(26, 33, 42);
+}
 
+.score {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  background-color: rgb(44, 50, 58);
+  border-radius: 0.125rem;
+  border: 1px solid transparent;
+  padding: 11px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  height: 100%;
+  box-sizing: border-box;
+  min-width: 7rem;
+}
+
+.value {
+  margin: 0.125rem 0px 0px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  align-self: center;
+}
+
+.odd {
+  padding-right: 4px;
+  color: rgb(255, 179, 25);
+  font-size: 0.75rem;
 }

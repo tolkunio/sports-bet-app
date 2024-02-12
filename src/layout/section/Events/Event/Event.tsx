@@ -1,23 +1,27 @@
 import s from './Event.module.scss';
-import {Icon} from "../../../../components/Icon/Icon";
+import {Link} from "react-router-dom";
+import {IScore} from "../../../../interfaces/IEventDetails";
 
 type EventPropsType = {
+    id:string,
     clubTitle: string,
     soccerTitle: string,
     date: string,
     time: string,
-    score: Array<number>
+    scores: Array<IScore>
 }
-export const Event = ({clubTitle, soccerTitle, date, time, score}: EventPropsType) => {
+export const Event = ({id,clubTitle, soccerTitle, date, time, scores}: EventPropsType) => {
     return (
         <div className={s.event}>
             <div className={s.infoBlock}>
                 <div className={s.info}>
-                    <a href={'#'}>{clubTitle}</a>
+                    <Link to={`/events/${id}`} className={s.link}>
+                        {clubTitle}
+                    </Link>
                     <a href={'#'}> {soccerTitle}</a>
                 </div>
                 <div className={s.details}>
-                    <Icon iconId={'bb'}/>
+                    <span className={s.bb}>BB</span>
                     <div className={s.date}>
                         <span>{date}</span>
                         <span>{time}</span>
@@ -29,6 +33,11 @@ export const Event = ({clubTitle, soccerTitle, date, time, score}: EventPropsTyp
                 </div>
             </div>
             <div className={s.scoreBlock}>
+                    {scores.map(item=>
+                        <div className={s.score}>
+                            <p className={s.odd}>{item.odd}</p>
+                            <p className={s.value}>{item.score}</p>
+                        </div>)}
 
             </div>
         </div>

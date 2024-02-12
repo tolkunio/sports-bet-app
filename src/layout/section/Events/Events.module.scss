@@ -1,11 +1,22 @@
 .events {
-
+  border-bottom: 1px solid rgb(16, 20, 25);
+  border: 1px solid greenyellow;
 }
 
 .container {
-  max-width: 1200px;
+  padding: 30px;
   width: 100%;
   min-height: 100%;
-  padding: 0 15px;
   margin: 0 auto; //выравнивание по центру
+  background-color: rgb(26, 33, 42);
+}
+.result{
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  color: #212229;
+  border: 1px solid red;
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 5rem;
 }

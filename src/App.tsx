@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
 import {Header} from "./layout/header/Header";
-import Events from "./layout/section/Events/Events";
 import {Footer} from "./layout/footer/Footer";
+import Events from "./layout/section/Events/Events";
 
 function App() {
   return (

@@ -3,13 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
+import {EventDetails} from "./layout/section/EventDetails/EventDetails";
+import {Routes} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+          <Routes>
+              <Route path={'/events/:userId'} element={<EventDetails/>}/>
+              <Route path={'/'} element={<App/>}/>
+          </Routes>
+      </BrowserRouter>
+
   </React.StrictMode>
 );
 
